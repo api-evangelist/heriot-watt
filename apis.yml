@@ -1,0 +1,89 @@
+---
+aid: heriot-watt
+name: Heriot-Watt University
+description: >-
+  Heriot-Watt University is a public research university based in Edinburgh, Scotland,
+  with additional campuses in the Scottish Borders, Orkney, Dubai, and Malaysia. It is
+  ranked #257 in the QS World University Rankings 2025. Heriot-Watt's public, machine-readable
+  footprint centers on its Research Portal (powered by Elsevier Pure) for research outputs,
+  projects, and expertise, and on Ex Libris Alma/Primo library Discovery and Springshare
+  LibCal services. The university does not operate a public developer portal; programmatic
+  interfaces such as the Pure OAI-PMH/REST API and the LibCal API exist as platform features
+  but are gated and require credentials or institutional arrangement rather than being openly
+  self-service.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/heriot-watt/refs/heads/main/apis.yml
+tags:
+  - Education
+  - Higher Education
+  - University
+  - Scotland
+  - United Kingdom
+  - Research
+  - Library
+  - Open Access
+created: '2026-06-03'
+modified: '2026-06-03'
+specificationVersion: '0.19'
+apis:
+  - aid: heriot-watt:research-portal
+    name: Heriot-Watt Research Portal (Pure)
+    description: >-
+      Public research information portal powered by Elsevier Pure, exposing Heriot-Watt
+      University publications, projects, research data, activities, and researcher
+      profiles. The portal is publicly browsable and searchable. Pure provides an
+      OAI-PMH and REST API as platform features, but at this institution those
+      programmatic endpoints are not openly available (the OAI/ws endpoints redirect
+      to an error and require credentialed or arranged access).
+    humanURL: https://researchportal.hw.ac.uk/
+    baseURL: https://researchportal.hw.ac.uk/
+    tags: [ Research, Repository, Pure, Open Access, Publications ]
+    properties:
+      - type: Documentation
+        url: https://www.hw.ac.uk/uk/research/research-portal.htm
+  - aid: heriot-watt:library-discovery
+    name: Heriot-Watt Library Discovery (Ex Libris Primo / Alma)
+    description: >-
+      Library Discovery search across the catalogue, ebooks, journal articles, and
+      news, delivered on the Ex Libris Alma library management platform with the
+      Primo discovery interface. Ex Libris exposes Primo and Alma REST APIs as
+      platform capabilities, but these require an Ex Libris API key and institutional
+      arrangement and are not published as a self-service public API.
+    humanURL: https://www.hw.ac.uk/about/professional-services/information-services/find-resources
+    tags: [ Library, Discovery, Primo, Alma, Ex Libris, Catalog ]
+    properties:
+      - type: Documentation
+        url: https://www.hw.ac.uk/about/professional-services/information-services/find-resources
+  - aid: heriot-watt:libcal
+    name: Heriot-Watt LibCal (Springshare)
+    description: >-
+      Springshare LibCal service for library room bookings, events, and opening hours.
+      LibCal offers a documented REST API behind an admin-configured OAuth client; the
+      API surface is reachable at the institution's LibCal host but requires
+      authenticated credentials rather than open public access.
+    humanURL: https://hw.ac.libcal.com/
+    tags: [ Library, Bookings, Events, LibCal, Springshare ]
+    properties:
+      - type: Documentation
+        url: https://hw.ac.libcal.com/
+common:
+  - type: Website
+    url: https://www.hw.ac.uk/
+  - type: Status
+    url: https://www.hwstatus.info/
+  - type: LinkedIn
+    url: https://uk.linkedin.com/school/heriot-watt-university/
+  - type: Plans
+    url: plans/heriot-watt-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/heriot-watt-rate-limits.yml
+  - type: FinOps
+    url: finops/heriot-watt-finops.yml
+  - type: Review
+    url: review.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

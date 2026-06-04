@@ -1,0 +1,50 @@
+---
+name: Heriot-Watt University
+description: Heriot-Watt University public developer/API footprint review for APIs.json cataloging.
+url: https://raw.githubusercontent.com/api-evangelist/heriot-watt/refs/heads/main/review.yml
+created: '2026-06-03'
+modified: '2026-06-03'
+reviews:
+  - date: '2026-06-03'
+    rating: 2
+    summary: >-
+      Heriot-Watt University has no public developer portal and no official GitHub
+      organization (the "HerriotWatt" org is an unrelated student course project).
+      Verified live, publicly browsable platforms include the Research Portal (Elsevier
+      Pure), Library Discovery (Ex Libris Alma/Primo), Springshare LibCal, and the
+      system status page. The underlying platforms (Pure OAI-PMH/REST, Primo/Alma REST,
+      LibCal REST) support APIs as features, but at this institution they are gated:
+      the Pure /ws/oai endpoint redirects to an error and the others require credentials
+      or an Ex Libris/Springshare API key. No public endpoints, base URLs, or schemas
+      were fabricated; only URLs confirmed by live probing are listed below.
+    endpoints:
+      - url: https://www.hw.ac.uk/
+        status: 200
+        note: Official university website.
+      - url: https://researchportal.hw.ac.uk/
+        status: 200
+        note: Research Portal (Pure) home, publicly browsable.
+      - url: https://researchportal.hw.ac.uk/ws/oai?verb=Identify
+        status: 500
+        note: Pure OAI-PMH path redirects to an error endpoint; not openly available.
+      - url: https://www.hw.ac.uk/about/professional-services/information-services/find-resources
+        status: 200
+        note: Library find-resources page (Alma/Primo Discovery entry point).
+      - url: https://hw.ac.libcal.com/
+        status: 200
+        note: Springshare LibCal instance; REST API gated behind admin OAuth.
+      - url: https://hw.ac.libcal.com/admin/api/
+        status: 200
+        note: LibCal admin API console resolves but requires authentication.
+      - url: https://www.hwstatus.info/
+        status: 200
+        note: Heriot-Watt system status page.
+      - url: https://uk.linkedin.com/school/heriot-watt-university/
+        status: 200
+        note: Official LinkedIn school page.
+      - url: https://github.com/HerriotWatt
+        status: 200
+        note: Unofficial student course-project org, not an institutional GitHub presence.
+      - url: https://www.hw.ac.uk/developers
+        status: 404
+        note: No public developer portal exists.
