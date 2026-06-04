@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "hw": "https://researchportal.hw.ac.uk/ns#",
+    "name": "schema:name",
+    "url": "schema:url",
+    "description": "schema:description",
+    "organization": {
+      "@id": "schema:CollegeOrUniversity",
+      "@type": "@id"
+    },
+    "researchPortal": {
+      "@id": "hw:researchPortal",
+      "@type": "@id"
+    },
+    "libraryDiscovery": {
+      "@id": "hw:libraryDiscovery",
+      "@type": "@id"
+    },
+    "libcal": {
+      "@id": "hw:libcal",
+      "@type": "@id"
+    },
+    "publication": "schema:CreativeWork",
+    "project": "schema:Project",
+    "researcher": "schema:Person",
+    "dataset": "schema:Dataset",
+    "catalogItem": "schema:Book",
+    "event": "schema:Event",
+    "openingHours": "schema:openingHours",
+    "booking": "schema:Reservation"
+  },
+  "@type": "schema:CollegeOrUniversity",
+  "name": "Heriot-Watt University",
+  "url": "https://www.hw.ac.uk/",
+  "description": "A public research university based in Edinburgh, Scotland, with campuses in the Scottish Borders, Orkney, Dubai, and Malaysia."
+}
