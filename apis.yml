@@ -70,6 +70,10 @@ apis:
       - type: Documentation
         url: https://hw.ac.libcal.com/
 common:
+  - type: VulnerabilityDisclosure
+    url: security/heriot-watt-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/heriot-watt-domain-security.yml
   - type: Website
     url: https://www.hw.ac.uk/
   - type: Status
