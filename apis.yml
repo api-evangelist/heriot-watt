@@ -1,4 +1,3 @@
----
 aid: heriot-watt
 name: Heriot-Watt University
 description: >-
@@ -12,9 +11,21 @@ description: >-
   but are gated and require credentials or institutional arrangement rather than being openly
   self-service.
 type: Index
+accessModel:
+  pricing: free
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Free
+  confidence: medium
+  source:
+    - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/heriot-watt.png
 url: https://raw.githubusercontent.com/api-evangelist/heriot-watt/refs/heads/main/apis.yml
 tags:
   - Education
@@ -26,7 +37,7 @@ tags:
   - Library
   - Open Access
 created: '2026-06-03'
-modified: '2026-06-03'
+modified: '2026-07-25'
 specificationVersion: '0.19'
 apis:
   - aid: heriot-watt:research-portal
@@ -40,23 +51,10 @@ apis:
       to an error and require credentialed or arranged access).
     humanURL: https://researchportal.hw.ac.uk/
     baseURL: https://researchportal.hw.ac.uk/
-    tags: [ Research, Repository, Pure, Open Access, Publications ]
+    tags: [Research, Repository, Pure, Open Access, Publications]
     properties:
       - type: Documentation
         url: https://www.hw.ac.uk/uk/research/research-portal.htm
-  - aid: heriot-watt:library-discovery
-    name: Heriot-Watt Library Discovery (Ex Libris Primo / Alma)
-    description: >-
-      Library Discovery search across the catalogue, ebooks, journal articles, and
-      news, delivered on the Ex Libris Alma library management platform with the
-      Primo discovery interface. Ex Libris exposes Primo and Alma REST APIs as
-      platform capabilities, but these require an Ex Libris API key and institutional
-      arrangement and are not published as a self-service public API.
-    humanURL: https://www.hw.ac.uk/about/professional-services/information-services/find-resources
-    tags: [ Library, Discovery, Primo, Alma, Ex Libris, Catalog ]
-    properties:
-      - type: Documentation
-        url: https://www.hw.ac.uk/about/professional-services/information-services/find-resources
   - aid: heriot-watt:libcal
     name: Heriot-Watt LibCal (Springshare)
     description: >-
@@ -65,7 +63,7 @@ apis:
       API surface is reachable at the institution's LibCal host but requires
       authenticated credentials rather than open public access.
     humanURL: https://hw.ac.libcal.com/
-    tags: [ Library, Bookings, Events, LibCal, Springshare ]
+    tags: [Library, Bookings, Events, LibCal, Springshare]
     properties:
       - type: Documentation
         url: https://hw.ac.libcal.com/
@@ -88,6 +86,8 @@ common:
     url: finops/heriot-watt-finops.yml
   - type: Review
     url: review.yml
+  - type: About
+    url: https://www.hw.ac.uk/about/professional-services/information-services/find-resources
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
