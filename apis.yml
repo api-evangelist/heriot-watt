@@ -63,7 +63,18 @@ apis:
       API surface is reachable at the institution's LibCal host but requires
       authenticated credentials rather than open public access.
     humanURL: https://hw.ac.libcal.com/
-    tags: [Library, Bookings, Events, LibCal, Springshare]
+    tags:
+    - Library
+    - Bookings
+    - Event
+    - LibCal
+    - Springshare
+    tags_raw:
+    - Library
+    - Bookings
+    - Events
+    - LibCal
+    - Springshare
     properties:
       - type: Documentation
         url: https://hw.ac.libcal.com/
