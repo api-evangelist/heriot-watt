@@ -4,12 +4,15 @@
     {
       "source": "https://www.hw.ac.uk/news.htm",
       "feed_url": "https://www.hw.ac.uk/news.htm",
-      "title": "Heriot-Watt University News",
+      "title": "",
       "saved": 0,
-      "method": "none",
-      "error": "parse_failed"
+      "method": "none"
+    },
+    {
+      "source": "https://uk.linkedin.com/school/heriot-watt-university/",
+      "error": "HTTPError"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-08-22T20:08:02Z"
+  "fetched": "2026-08-30T22:33:40Z"
 }
