@@ -1,0 +1,133 @@
+generated: '2026-08-30'
+method: probed
+source: >-
+  Live probes of Heriot-Watt-operated hosts on 2026-08-30 — www.ros.hw.ac.uk (DSpace 8
+  Research Output Service), shib1.hw.ac.uk (Shibboleth IdP), the UK Access Management
+  Federation aggregate + MDQ, and the DataCite / Crossref / ROR public registries.
+note: >-
+  Scored against the Kin Score `education` regulatory regime standards[]. Reward-only:
+  every entry below is either evidenced by a probe recorded here or marked
+  conforms: false with the probe that failed. Standards belonging to platforms Heriot-Watt
+  merely rents (Instructure Canvas, Springshare LibCal, Ex Libris Primo, Elsevier Pure)
+  are NOT credited to Heriot-Watt — the tenant relationships are recorded in apis.yml
+  with x-operator: tenant and the conformance belongs to the vendor's own repo.
+standards:
+  - id: oai-pmh
+    name: OAI-PMH 2.0 (Open Archives Initiative Protocol for Metadata Harvesting)
+    conforms: true
+    url: https://www.ros.hw.ac.uk/server/oai/request?verb=Identify
+    evidence: >-
+      GET https://www.ros.hw.ac.uk/server/oai/request?verb=Identify returns 200 with a
+      valid OAI-PMH 2.0 Identify response — repositoryName "HWU", protocolVersion 2.0,
+      adminEmail open.access@hw.ac.uk, earliestDatestamp 2008-03-01T00:00:00Z,
+      deletedRecord "transient", granularity YYYY-MM-DDThh:mm:ssZ, repositoryIdentifier
+      ros.hw.ac.uk, sampleIdentifier oai:ros.hw.ac.uk:10399/1234. ListMetadataFormats
+      returns didl, mods, ore, mets, xoai and oai_dc. ListSets returns 200 with the
+      institution's own community sets (Edinburgh Business School; Energy, Geoscience,
+      Infrastructure and Society; and others). The host is under the institution's own
+      registrable domain (hw.ac.uk) with a matching PTR record.
+    x-operator: institution
+  - id: saml
+    name: SAML 2.0 Web Browser SSO
+    conforms: true
+    url: http://mdq.ukfederation.org.uk/entities/https%3A%2F%2Fshib1.hw.ac.uk%2Fshibboleth
+    evidence: >-
+      Heriot-Watt University operates SAML 2.0 identity-provider entities registered in
+      the UK Access Management Federation (registrationAuthority
+      http://ukfederation.org.uk), OrganizationName "Heriot-Watt University". The
+      aggregate carries IDPSSODescriptor + AttributeAuthorityDescriptor for
+      https://shib1.hw.ac.uk/shibboleth (DisplayName "Heriot-Watt University"),
+      https://shibprod.hw.ac.uk/idp/shibboleth ("Heriot-Watt University (prod)") and
+      https://shibdev.hw.ac.uk/idp/shibboleth ("Heriot-Watt University (test)"), plus an
+      SPSSODescriptor for https://courses.scholar.hw.ac.uk/shibboleth ("Heriot-Watt
+      University: The SCHOLAR Programme"). The per-entity MDQ endpoint returns 200 with a
+      signed EntityDescriptor for the shib1 entity. SingleSignOnService bindings
+      advertised: SAML2 HTTP-POST, HTTP-POST-SimpleSign, HTTP-Redirect and the legacy
+      Shibboleth 1.x SSO profile.
+    x-operator: institution
+  - id: shibboleth
+    name: Shibboleth Identity Provider
+    conforms: true
+    url: https://shib1.hw.ac.uk/shibboleth-idp/shibboleth
+    evidence: >-
+      GET https://shib1.hw.ac.uk/shibboleth-idp/shibboleth returns 200 with a Shibboleth
+      IdP EntityDescriptor for entityID https://shib1.hw.ac.uk/shibboleth carrying the
+      urn:mace:shibboleth:metadata:1.0 namespace and four SingleSignOnService bindings.
+      shib1.hw.ac.uk resolves to 137.195.101.235, inside Heriot-Watt's own 137.195.0.0/16
+      allocation, with a matching PTR.
+    note: >-
+      The self-published document at this URL is the Shibboleth distribution's stock
+      idp-metadata.xml (it carries the "This is example metadata only" comment header) —
+      the entityID and endpoints match the federation registration, but the authoritative,
+      signed copy is the UK federation MDQ document cited under `saml`. Recorded here
+      because the endpoint is live and machine-readable, not because it is curated.
+    x-operator: institution
+  - id: datacite
+    name: DataCite DOI registration
+    conforms: true
+    url: https://api.datacite.org/clients/bl.hwu
+    evidence: >-
+      DataCite repository client BL.HWU, name "Heriot-Watt University", clientType
+      repository, isActive true, member since 2015, under the British Library consortium.
+      337 DOIs registered against the client (api.datacite.org/dois?client-id=bl.hwu),
+      prefix 10.17861, with landing pages on researchportal.hw.ac.uk.
+    x-operator: institution
+  - id: crossref
+    name: Crossref membership
+    conforms: true
+    url: https://api.crossref.org/members/14708
+    evidence: >-
+      Crossref member 14708, primary-name "Heriot-Watt University" — a single exact match
+      on api.crossref.org/members?query=heriot-watt.
+    x-operator: institution
+  - id: orcid
+    name: ORCID
+    conforms: false
+    evidence: >-
+      No institution-published ORCID integration surface was found. The ROS DSpace
+      deployment lists `orcid` and `orcidWorks` among its external sources
+      (/server/api/integration/externalsources), but that is a DSpace product feature
+      present in every DSpace 8 install and is not evidence of a Heriot-Watt ORCID
+      member API integration. The Elsevier Pure research portal is bot-challenged (403 on
+      /en/organisations/) so its ORCID display could not be confirmed.
+  - id: scim
+    name: SCIM 2.0
+    conforms: false
+    evidence: >-
+      No SCIM endpoint or provisioning documentation found on any Heriot-Watt-operated
+      host. Identity provisioning is not exposed publicly.
+  - id: lti
+    name: IMS Learning Tools Interoperability
+    conforms: false
+    evidence: >-
+      Heriot-Watt runs Instructure Canvas at canvas.hw.ac.uk (CNAME
+      hwu-vanity.instructure.com), which is LTI-certified as a product. That certification
+      is Instructure's, not Heriot-Watt's, and no institution-published LTI registration,
+      tool configuration or platform-issuer document was found.
+  - id: oneroster
+    name: IMS OneRoster
+    conforms: false
+    evidence: No OneRoster endpoint or roster-exchange documentation found.
+  - id: ed-fi
+    name: Ed-Fi Data Standard
+    conforms: false
+    evidence: Ed-Fi is a US K-12 / state-longitudinal standard; not applicable to a Scottish HEI and no artifact found.
+  - id: caliper
+    name: IMS Caliper Analytics
+    conforms: false
+    evidence: No Caliper event store, sensor endpoint or documentation found.
+  - id: qti
+    name: IMS Question and Test Interoperability
+    conforms: false
+    evidence: No QTI item bank or export surface found on an institution-operated host.
+regulatory:
+  - UK GDPR / Data Protection Act 2018 (ICO) — Information Governance function publishes
+    data-protection and privacy-rights notices at hw.ac.uk
+  - Freedom of Information (Scotland) Act 2002 — Model Publication Scheme published,
+    including section 8.19 Open data
+  - Quality Assurance Agency for Higher Education (QAA Scotland) — Enhancement-Led
+    Institutional Review
+  - Scottish Funding Council (SFC) — funded higher education institution
+  - Equality Act 2010
+  - Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018 —
+    accessibility statement and roadmap published
