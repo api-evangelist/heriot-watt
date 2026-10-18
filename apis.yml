@@ -63,6 +63,21 @@ tags:
   - OAI-PMH
   - Identity Federation
   - Library
+  - LMS
+tags_raw:
+  - University
+  - Higher Education
+  - Education
+  - Scotland
+  - United Kingdom
+  - Universities Scotland
+  - Research
+  - Research Data
+  - Institutional Repository
+  - Open Access
+  - OAI-PMH
+  - Identity Federation
+  - Library
   - Learning Management
 created: '2026-06-03'
 modified: '2026-08-30'
@@ -207,6 +222,11 @@ apis:
     x-platform: Instructure Canvas
     x-vendor-host: hwu-vanity.instructure.com
     tags:
+      - LMS
+      - Canvas
+      - LTI
+      - Teaching
+    tags_raw:
       - Learning Management
       - Canvas
       - LTI
