@@ -1,4 +1,4 @@
-# Heriot-Watt University (heriot-watt)
+# Heriot-Watt University
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,55 +64,118 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Heriot-Watt University is a public research university based in Edinburgh, Scotland, with additional campuses in the Scottish Borders, Orkney, Dubai, and Malaysia, ranked #257 in the QS World University Rankings 2025. This repository catalogs the university's public, machine-readable footprint as an APIs.json provider profile. Heriot-Watt does not run a public developer portal; its programmatic surface comes from platform products — the Research Portal (Elsevier Pure), Library Discovery (Ex Libris Alma/Primo), and Springshare LibCal — whose APIs exist as platform features but are gated rather than openly self-service.
+Heriot-Watt University is a public research university based in Edinburgh, Scotland, with further campuses in the Scottish Borders, Orkney, Dubai and Malaysia, ROR 04mghma93. Its programmable footprint is small but — unusually for this cohort — not empty and not entirely rented. Two surfaces are genuinely institution-operated and openly callable without credentials: the Research Output Service (ROS) at www.ros.hw.ac.uk, a DSpace 8 deployment on the university's own domain with a live OAI-PMH 2.0 endpoint and an unauthenticated DSpace REST/HAL API over its theses and research outputs; and the university's SAML 2.0 identity provider, registered in the UK Access Management Federation as Heriot-Watt University, whose signed metadata is machine-readable through the federation's MDQ service. Everything else that looks like a Heriot-Watt API is a vendor platform the university rents under its own name and is recorded here as a tenant relationship, not as Heriot-Watt engineering: the research portal at researchportal.hw.ac.uk is Elsevier Pure (the host CNAMEs to hwu.elsevierpure.com), library discovery at discovery.hw.ac.uk is Ex Libris Primo, canvas.hw.ac.uk is Instructure Canvas, and hw.ac.libcal.com is Springshare LibCal. Heriot-Watt operates no central developer portal, no public API documentation, no open-data portal and no course-catalog or timetabling API; the programme search at hw.ac.uk is server-rendered HTML with no JSON backend, and timetable.hw.ac.uk, though on the university's own network, exposes no reachable public endpoint.
 
-- APIs.json: https://raw.githubusercontent.com/api-evangelist/heriot-watt/refs/heads/main/apis.yml
-- Run with Naftiko: https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=heriot-watt-api-evangelist&utm_content=repo
+**Areas:** University · Higher Education · Education · Scotland · United Kingdom · Universities Scotland · Research · Research Data · Institutional Repository · Open Access · OAI-PMH · Identity Federation
 
-## Type
+## Heriot-Watt University on APIs.io
 
-- Index
-- Consumer
-- 3rd-Party
+Everything profiled for Heriot-Watt University is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/heriot-watt/](https://apis.io/providers/heriot-watt/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (6)
 
-Education, Higher Education, University, Scotland, United Kingdom, Research, Library, Open Access
+- [Heriot-Watt Research Output Service (ROS)](https://apis.io/apis/heriot-watt/research-output-service/) — The university's own institutional repository of theses and research outputs, running DSpace 8 on www.ros.hw.ac.uk — a host under Heriot-Watt's registrable…
+- [Heriot-Watt University Identity Provider (UK Access Management Federation)](https://apis.io/apis/heriot-watt/identity-federation/) — Heriot-Watt operates its own SAML 2.0 / Shibboleth identity provider and is a registered member of the UK Access Management Federation…
+- [Heriot-Watt Research Portal (Elsevier Pure)](https://apis.io/apis/heriot-watt/research-portal/) — Heriot-Watt's public research information portal — publications, projects, research data, activities and researcher profiles. It carries a hw.ac.uk hostname…
+- [Heriot-Watt Library Discovery (Ex Libris Primo)](https://apis.io/apis/heriot-watt/library-discovery/) — Library discovery and catalog search for Heriot-Watt's Edinburgh, Scottish Borders, Orkney, Dubai and Malaysia libraries, running Ex Libris Primo under the…
+- [Heriot-Watt Canvas (Instructure)](https://apis.io/apis/heriot-watt/canvas/) — The university's virtual learning environment, an Instructure Canvas tenancy at canvas.hw.ac.uk (CNAME hwu-vanity.instructure.com). Canvas ships a…
+- [Heriot-Watt LibCal (Springshare)](https://apis.io/apis/heriot-watt/libcal/) — Springshare LibCal tenancy for library room bookings, events and opening hours at hw.ac.libcal.com (CNAME region-eu.libcal.com). LibCal's REST API exists at…
 
-## APIs
+### Published properties
 
-- **Heriot-Watt Research Portal (Pure)** — Public research information portal (publications, projects, data, profiles) powered by Elsevier Pure. Docs: https://www.hw.ac.uk/uk/research/research-portal.htm — Portal: https://researchportal.hw.ac.uk/
-- **Heriot-Watt Library Discovery (Ex Libris Primo / Alma)** — Library catalogue and resource discovery on the Ex Libris Alma platform with the Primo interface. Docs: https://www.hw.ac.uk/about/professional-services/information-services/find-resources
-- **Heriot-Watt LibCal (Springshare)** — Library room bookings, events, and hours. Docs: https://hw.ac.libcal.com/
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Note: The Pure OAI-PMH/REST, Primo/Alma REST, and LibCal REST APIs are platform capabilities that require credentials, an API key, or institutional arrangement. No openly self-service public API endpoints were confirmed.
+#### JSON-LD (1)
 
-## Plans, Rate Limits & FinOps
+Linked-data contexts for the provider's vocabulary.
 
-- Plans: [plans/heriot-watt-plans-pricing.yml](plans/heriot-watt-plans-pricing.yml)
-- Rate Limits: [rate-limits/heriot-watt-rate-limits.yml](rate-limits/heriot-watt-rate-limits.yml)
-- FinOps: [finops/heriot-watt-finops.yml](finops/heriot-watt-finops.yml)
+- [Heriot Watt Context](https://apis.io/jsonld/heriot-watt/heriot-watt-context/)
 
-## Timestamps
+#### Security (2)
 
-- Created: 2026-06-03
-- Modified: 2026-06-03
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Heriot Watt Domain Security](https://apis.io/security/heriot-watt/heriot-watt-domain-security/)
+- [Heriot Watt Vulnerability Disclosure](https://apis.io/security/heriot-watt/heriot-watt-vulnerability-disclosure/)
 
-- Website: https://www.hw.ac.uk/
-- Status: https://www.hwstatus.info/
-- LinkedIn: https://uk.linkedin.com/school/heriot-watt-university/
-- Review: [review.yml](review.yml)
+#### Plans and pricing (1)
 
-## Notes
+Published plans, tiers and prices.
 
-- No public developer portal was found (`https://www.hw.ac.uk/developers` returns 404).
-- No official Heriot-Watt GitHub organization exists; the `HerriotWatt` GitHub org is an unrelated student course-project account and is intentionally excluded.
-- The Research Portal is publicly browsable, but its Pure OAI-PMH endpoint (`/ws/oai`) redirects to an error and is not openly available.
-- Library Discovery (Alma/Primo) and LibCal expose vendor REST APIs that require credentials/API keys; no open endpoints were cataloged.
-- All listed URLs were verified by live HTTP probing on 2026-06-03; see [review.yml](review.yml) for status codes. No endpoints or schemas were fabricated.
+- [Heriot Watt Plans Pricing](https://apis.io/plans/heriot-watt/heriot-watt-plans-pricing/)
 
-## Maintainers
+#### Rate limits (1)
 
-- Kin Lane — kin@apievangelist.com
+Published request limits.
+
+- [Heriot Watt Rate Limits](https://apis.io/rate-limits/heriot-watt/heriot-watt-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Heriot Watt Finops](https://apis.io/finops/heriot-watt/heriot-watt-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.hw.ac.uk/)
+- [API reference](https://www.ros.hw.ac.uk/server/api)
+- [Support](https://www.hw.ac.uk/about/professional-services/information-services/contact-visit-us/contact-us)
+- [Blog](https://www.hw.ac.uk/news/blog)
+- [Terms of service](https://www.hw.ac.uk/about/our-policies/terms-and-conditions)
+- [Privacy policy](https://www.hw.ac.uk/about/professional-services/governance-and-legal-services/information-governance/protect-information/data-protection-overview/privacy-and-your-data-rights)
+
+## API Evangelist rating
+
+**Kin Score 23.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 14.3 |
+| Contract governance | 18.2 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 26.3 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/heriot-watt/](https://apis.io/providers/heriot-watt/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Heriot-Watt University: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/heriot-watt/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
